@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private const float SPEED = 7f;
+    [SerializeField] private const float SPEED = 7f;
 
     private new Rigidbody2D rigidbody2D;
     private Vector2 moveDir;

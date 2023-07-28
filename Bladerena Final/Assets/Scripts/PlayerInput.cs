@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Adjust the player's movement speed in the Inspector.
+    [SerializeField]public float moveSpeed = 5f; // Adjust the player's movement speed in the Inspector.
     private bool facingRight = true; // Track the player's facing direction.
 
     private Animator myAnim;

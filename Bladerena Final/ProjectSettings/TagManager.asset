@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Props
+    uniqueID: 725290317
+    locked: 0
+  - name: Pillar
+    uniqueID: 1950005115
+    locked: 0

@@ -15,13 +15,12 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    public void Damage(int dmgAmount) {
+    void Die(int dmgAmount) {
 
         currentHealth = currentHealth - dmgAmount;
 
-        //rb.bodyType = RigidbodyType2D.Static;
+        rb.bodyType = RigidbodyType2D.Static;
         //Play Death Animation
-        Destroy(gameObject);
         //Show Game Over Screen
 
    

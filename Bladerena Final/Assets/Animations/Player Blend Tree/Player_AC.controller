@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DashBlend Tree 0
+  m_Name: Dash Blend Tree
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -64,7 +64,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 6b586f90bb18aba48b1118ea5a46ab17, type: 2}
+    m_Motion: {fileID: 7400000, guid: c136e7000effb824d9c3cfc6c0080a6f, type: 2}
     m_Threshold: -1
     m_Position: {x: -0.5, y: 0}
     m_TimeScale: 1
@@ -72,7 +72,7 @@ BlendTree:
     m_DirectBlendParameter: horizontalMovement
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 6cedca9eca2839748a97fa89f421ca70, type: 2}
+    m_Motion: {fileID: 7400000, guid: d6603fa4d52643c4489a4eabbecd63fc, type: 2}
     m_Threshold: 1
     m_Position: {x: 0.5, y: 0}
     m_TimeScale: 1
@@ -80,7 +80,7 @@ BlendTree:
     m_DirectBlendParameter: horizontalMovement
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 0229ef5b683148d4a9ca9525db169e03, type: 2}
+    m_Motion: {fileID: 7400000, guid: 2631722cc35da2d448ad5e276ff142f2, type: 2}
     m_Threshold: 3
     m_Position: {x: 0, y: 0.5}
     m_TimeScale: 1
@@ -88,7 +88,7 @@ BlendTree:
     m_DirectBlendParameter: horizontalMovement
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 228465d6c151cbc419b7fee242434c95, type: 2}
+    m_Motion: {fileID: 7400000, guid: 230222ea88f1a6b4ead8e577b7d353b3, type: 2}
     m_Threshold: 5
     m_Position: {x: 0, y: -0.5}
     m_TimeScale: 1
@@ -183,7 +183,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isDashing
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8265667909278668146}
   m_Solo: 0
@@ -526,7 +529,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: isDashing
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7995741188391768557}
   m_Solo: 0

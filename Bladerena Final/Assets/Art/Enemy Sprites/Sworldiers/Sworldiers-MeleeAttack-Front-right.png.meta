@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3fed73bd82d233145b2ea66acb4512ad
+guid: 57c4eef3c03854641bc4727db7c1e322
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,30 +106,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death-Back_0
+      name: Sworldiers-MeleeAttack-Front_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,83 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dd2cafb9c8bfdf4f9416dfcab10dc19
-      internalID: 11147173
+      spriteID: 5f450c5043e869c45ad2f8dc7828b63e
+      internalID: -519414701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death-Back_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ed4c0de730e7e645ad63c2e53383f45
-      internalID: 1955977060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death-Back_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3819b46225e1e447a1c1a40ebb7b6f3
-      internalID: -1530074123
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death-Back_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a74de6500e6fc024492d96d3ccf8b64a
-      internalID: -1457261078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death-Back_4
+      name: Sworldiers-MeleeAttack-Front_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +145,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb4c8b6af2da7104698b40dfbc9d1ec4
-      internalID: -1033401735
+      spriteID: 32c15aa514824aa449b172653483ff56
+      internalID: -1891624367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sworldiers-MeleeAttack-Front_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2844c714513e140a69a5e537de4ec0
+      internalID: 808775265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sworldiers-MeleeAttack-Front_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37740e92937f0e4e89e7a92fc4ddf1f
+      internalID: -1927685031
       vertices: []
       indices: 
       edges: []
@@ -238,11 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Death-Back_0: 11147173
-      Death-Back_1: 1955977060
-      Death-Back_2: -1530074123
-      Death-Back_3: -1457261078
-      Death-Back_4: -1033401735
+      Sworldiers-MeleeAttack-Front_0: -519414701
+      Sworldiers-MeleeAttack-Front_1: -1891624367
+      Sworldiers-MeleeAttack-Front_2: 808775265
+      Sworldiers-MeleeAttack-Front_3: -1927685031
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

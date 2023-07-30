@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowProjectile : EnemyDamage
+public class ArrowProjectile : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float resetTime;
@@ -29,9 +29,15 @@ public class ArrowProjectile : EnemyDamage
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        base.OnTriggerEnter2D(collision); // Execute the logic from the parent script first
-        gameObject.SetActive(false); // When this hits any object deactivate arrow
-        
+        if (collision.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().Damage(1);
+            gameObject.SetActive(false);
+        }
+        gameObject.SetActive(false);
+
+        // When this hits any object deactivate arrow
+
     }
 
 

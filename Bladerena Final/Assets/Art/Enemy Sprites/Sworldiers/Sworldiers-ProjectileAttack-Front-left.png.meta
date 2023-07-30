@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 57c4eef3c03854641bc4727db7c1e322
+guid: 9ff595b5f0984fb4cbb19ebb75f1d063
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sworldiers-MeleeAttack-Front_0
+      name: Sworldiers-ProjectileAttack-Front_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f450c5043e869c45ad2f8dc7828b63e
-      internalID: -519414701
+      spriteID: d88902aa9b235b9468930ee162d4b19f
+      internalID: 2013290360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sworldiers-MeleeAttack-Front_1
+      name: Sworldiers-ProjectileAttack-Front_1
       rect:
         serializedVersion: 2
         x: 64
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32c15aa514824aa449b172653483ff56
-      internalID: -1891624367
+      spriteID: 8f90f8513c736844799d9971837ca5dd
+      internalID: 992821200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sworldiers-MeleeAttack-Front_2
+      name: Sworldiers-ProjectileAttack-Front_2
       rect:
         serializedVersion: 2
         x: 128
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe2844c714513e140a69a5e537de4ec0
-      internalID: 808775265
+      spriteID: f3572440081d735479a8f3057311f8f3
+      internalID: -2092497993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sworldiers-MeleeAttack-Front_3
+      name: Sworldiers-ProjectileAttack-Front_3
       rect:
         serializedVersion: 2
         x: 192
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a37740e92937f0e4e89e7a92fc4ddf1f
-      internalID: -1927685031
+      spriteID: b1dfbe71c07284d429fc50bd6e3aa52f
+      internalID: -2009163513
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sworldiers-MeleeAttack-Front_0: -519414701
-      Sworldiers-MeleeAttack-Front_1: -1891624367
-      Sworldiers-MeleeAttack-Front_2: 808775265
-      Sworldiers-MeleeAttack-Front_3: -1927685031
+      Sworldiers-ProjectileAttack-Front_0: 2013290360
+      Sworldiers-ProjectileAttack-Front_1: 992821200
+      Sworldiers-ProjectileAttack-Front_2: -2092497993
+      Sworldiers-ProjectileAttack-Front_3: -2009163513
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

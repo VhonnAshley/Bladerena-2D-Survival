@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
     private const float SPEED = 7f;
+    private const float ATTACK_ANIMATION_DURATION = 0.5f; // Replace with the actual duration of your attack animation
 
     [SerializeField] private LayerMask dashLayerMask;
 
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 lastMoveDir;
     private Animator animator;
     private bool isDashButtonDown;
+    private bool isAttacking; // New variable to track the attack animation state
 
     private void Awake()
     {
@@ -26,6 +28,13 @@ public class PlayerController : MonoBehaviour
     {
         HandleInput();
         HandleMovement();
+
+        // Check for left mouse button click and trigger the attack animation
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            animator.SetBool("isAttacking", true);
+            StartCoroutine(ResetAttackAnimation());
+        }
     }
 
     private void HandleInput()
@@ -108,6 +117,19 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+    private IEnumerator ResetAttackAnimation()
+    {
+        // Set the isAttacking flag to true while the animation is playing
+        isAttacking = true;
 
+        // Wait for the attack animation to finish playing
+        yield return new WaitForSeconds(ATTACK_ANIMATION_DURATION);
+
+        // Set the "isAttacking" parameter back to false
+        animator.SetBool("isAttacking", false);
+
+        // Set the isAttacking flag to false when the animation is done
+        isAttacking = false;
+    }
 
 }

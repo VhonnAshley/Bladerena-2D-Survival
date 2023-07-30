@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 25fb288f836874c439afb8609f47d80a
+guid: 3077ec7288927ad4cab8d4675d166f17
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,17 +106,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cpl Quandale-Attack animation-Back_0
+      name: Attack-Right_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 25
+        y: 24
+        width: 13
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b101b1c08f0d76445a8c8cda95c64002
-      internalID: 457666847
+      spriteID: c393ab29424ca604aa5fb55edc7bc10a
+      internalID: 614078455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cpl Quandale-Attack animation-Back_1
+      name: Attack-Right_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
+        x: 87
+        y: 24
+        width: 15
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a77999332204af241bca52dcb4ab3076
-      internalID: -1145010138
+      spriteID: 05f3e608afe6c4743a3ee670373ae079
+      internalID: 1255377854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cpl Quandale-Attack animation-Back_2
+      name: Attack-Right_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
+        x: 144
+        y: 24
+        width: 22
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb67fa5b17cc7244588f1465b121664f
-      internalID: -210573299
+      spriteID: b1e87bf2ea3537e4294a61fbe4493284
+      internalID: 383985197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cpl Quandale-Attack animation-Back_3
+      name: Attack-Right_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
+        x: 218
+        y: 24
+        width: 16
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0613e6b48c8ce5e45bdefae4cdda6c63
-      internalID: -97167675
+      spriteID: 16af13582b0ad3e45b72cfd502ba178c
+      internalID: 982468366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cpl Quandale-Attack animation-Back_4
+      name: Attack-Right_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
+        x: 282
+        y: 24
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ce69c6caa38af34b87e5f3c3d28e7ff
-      internalID: -1875752919
+      spriteID: 758c88ef3b85041448b7461441baba62
+      internalID: 264828120
       vertices: []
       indices: 
       edges: []
@@ -225,11 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cpl Quandale-Attack animation-Back_0: 457666847
-      Cpl Quandale-Attack animation-Back_1: -1145010138
-      Cpl Quandale-Attack animation-Back_2: -210573299
-      Cpl Quandale-Attack animation-Back_3: -97167675
-      Cpl Quandale-Attack animation-Back_4: -1875752919
+      Attack-Right_0: 614078455
+      Attack-Right_1: 1255377854
+      Attack-Right_2: 383985197
+      Attack-Right_3: 982468366
+      Attack-Right_4: 264828120
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

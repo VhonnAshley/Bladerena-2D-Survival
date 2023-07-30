@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 909077b5d0c7859408aa0b4212c517e1
+guid: 929cb3034a967364692f810abd530b46
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,12 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cpl Quandale-Death-Front_0
+      name: Death-Right_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 16
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4385fc0566a1f484e8f34ae67104c046
-      internalID: -899442861
+      spriteID: f87d07f5dddd4764ea7dfafa7484f280
+      internalID: 1004097103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cpl Quandale-Death-Front_1
+      name: Death-Right_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 18
         y: 0
-        width: 16
-        height: 16
+        width: 12
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e123e7c62c21a194db63f218d4182051
-      internalID: 350966264
+      spriteID: e42e5e2c7493581488feb90e41187e8d
+      internalID: 988983525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cpl Quandale-Death-Front_2
+      name: Death-Right_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 34
         y: 0
-        width: 16
-        height: 16
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94ee115889643bf4f9a0626ae80d7913
-      internalID: 324981328
+      spriteID: e197dc04af2796a45a9fb06881731d19
+      internalID: -310388147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cpl Quandale-Death-Front_3
+      name: Death-Right_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 50
         y: 0
-        width: 16
-        height: 16
+        width: 13
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad555fdb5c6bb244194f14df894b038d
-      internalID: -1797680854
+      spriteID: bea8257fa9b86a74889d0df06fdea617
+      internalID: 1883525459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cpl Quandale-Death-Front_4
+      name: Death-Right_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 66
         y: 0
-        width: 16
-        height: 16
+        width: 13
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee6572ad488fb3a46bd2a3fa0b65329b
-      internalID: 1843921820
+      spriteID: ee467756e27079f4e83c087055b1d235
+      internalID: 1788446475
       vertices: []
       indices: 
       edges: []
@@ -238,11 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cpl Quandale-Death-Front_0: -899442861
-      Cpl Quandale-Death-Front_1: 350966264
-      Cpl Quandale-Death-Front_2: 324981328
-      Cpl Quandale-Death-Front_3: -1797680854
-      Cpl Quandale-Death-Front_4: 1843921820
+      Death-Right_0: 1004097103
+      Death-Right_1: 988983525
+      Death-Right_2: -310388147
+      Death-Right_3: 1883525459
+      Death-Right_4: 1788446475
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

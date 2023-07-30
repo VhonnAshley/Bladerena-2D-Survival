@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b96816f905cebe94a968d96c80debf2f
+guid: 9f8b080421249794e9fe7d2651d62089
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,17 +106,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cpl Quandale-Attack animation-Side_0
+      name: Death-Front_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 64
-        height: 64
+        width: 12
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f4f7c8455c7b7447b8c07b4f56335b4
-      internalID: 1135243948
+      spriteID: 5be26540171b3934180e158df9bb7b2d
+      internalID: -645239982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cpl Quandale-Attack animation-Side_1
+      name: Death-Front_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 18
         y: 0
-        width: 64
-        height: 64
+        width: 12
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c34f30138f64874b9d4b362db9e3f79
-      internalID: -655287332
+      spriteID: 139a90f98ba60de4dbbbf47ccd6d7887
+      internalID: 1220826960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cpl Quandale-Attack animation-Side_2
+      name: Death-Front_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 34
         y: 0
-        width: 64
-        height: 64
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4554a4c95cd48a740b1296c8ef9fd7a3
-      internalID: -863714841
+      spriteID: fcb8fad5c6b84da42a33f1cfdc2e595a
+      internalID: 1576108736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cpl Quandale-Attack animation-Side_3
+      name: Death-Front_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 48
         y: 0
-        width: 64
-        height: 64
+        width: 32
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,29 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa5804efccc633746ae8f303ba296373
-      internalID: -922359589
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cpl Quandale-Attack animation-Side_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 929fa70aa04573542a73c25cddc9108d
-      internalID: -314412000
+      spriteID: 29be78cf574c95b4eb3e79325a914a3a
+      internalID: 2098683884
       vertices: []
       indices: 
       edges: []
@@ -225,11 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cpl Quandale-Attack animation-Side_0: 1135243948
-      Cpl Quandale-Attack animation-Side_1: -655287332
-      Cpl Quandale-Attack animation-Side_2: -863714841
-      Cpl Quandale-Attack animation-Side_3: -922359589
-      Cpl Quandale-Attack animation-Side_4: -314412000
+      Death-Front_0: -645239982
+      Death-Front_1: 1220826960
+      Death-Front_2: 1576108736
+      Death-Front_3: 2098683884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

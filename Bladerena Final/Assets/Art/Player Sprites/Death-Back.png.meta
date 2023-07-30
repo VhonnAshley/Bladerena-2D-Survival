@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 00894cdb1bd7e4e4f88bc13092262b61
+guid: 3fed73bd82d233145b2ea66acb4512ad
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,12 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cpl Quandale-Death-Back_0
+      name: Death-Back_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 16
+        width: 12
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b703f40a94a92e34c8148524b39eea12
-      internalID: -631882127
+      spriteID: 1dd2cafb9c8bfdf4f9416dfcab10dc19
+      internalID: 11147173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cpl Quandale-Death-Back_1
+      name: Death-Back_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 18
         y: 0
-        width: 16
-        height: 16
+        width: 12
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9685149b700959d43bc7232c5de07517
-      internalID: 1268820752
+      spriteID: 3ed4c0de730e7e645ad63c2e53383f45
+      internalID: 1955977060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cpl Quandale-Death-Back_2
+      name: Death-Back_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 34
         y: 0
-        width: 16
-        height: 16
+        width: 12
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 884aa87dc3a2cb341ab77f05f57c069b
-      internalID: 2012670206
+      spriteID: a3819b46225e1e447a1c1a40ebb7b6f3
+      internalID: -1530074123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cpl Quandale-Death-Back_3
+      name: Death-Back_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,29 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7a4621b07be35a42890ac91d9ae7f7c
-      internalID: 1433388944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cpl Quandale-Death-Back_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 522df66b918dc1c48adda2ea67500c91
-      internalID: 721723782
+      spriteID: a74de6500e6fc024492d96d3ccf8b64a
+      internalID: -1457261078
       vertices: []
       indices: 
       edges: []
@@ -238,11 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cpl Quandale-Death-Back_0: -631882127
-      Cpl Quandale-Death-Back_1: 1268820752
-      Cpl Quandale-Death-Back_2: 2012670206
-      Cpl Quandale-Death-Back_3: 1433388944
-      Cpl Quandale-Death-Back_4: 721723782
+      Death-Back_0: 11147173
+      Death-Back_1: 1955977060
+      Death-Back_2: -1530074123
+      Death-Back_3: -1457261078
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

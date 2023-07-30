@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 021445551b80236418a2093a4ca07203
+guid: 5c5545536b3a2984bbad1f951220443d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Goblin-Attack-Back_0
+      name: Goblin-Attack-Side_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ffa3849498b8044ea9e014cd27bc3c0
-      internalID: -1402440149
+      spriteID: 52be4b11de74ec54bbd41976e66b0b2f
+      internalID: -362526315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_1
+      name: Goblin-Attack-Side_1
       rect:
         serializedVersion: 2
         x: 64
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 646fc9bdc47eaff4abd1d9c85e899a4d
-      internalID: -354114555
+      spriteID: 6e6610693b6e68043b391f1c0f346d70
+      internalID: 521198130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_2
+      name: Goblin-Attack-Side_2
       rect:
         serializedVersion: 2
         x: 128
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bbbd73be4987044bbb22412e229dba5
-      internalID: 925598509
+      spriteID: 39e5c33a83106db4fa69ab87b9d2605b
+      internalID: 641298471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_3
+      name: Goblin-Attack-Side_3
       rect:
         serializedVersion: 2
         x: 192
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7794045f89f93324cbd5dc1e9134665f
-      internalID: 840626134
+      spriteID: 3aacaad03f1823a4a8c90c91acfc3977
+      internalID: -444230244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_4
+      name: Goblin-Attack-Side_4
       rect:
         serializedVersion: 2
         x: 256
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a3ff7aa3469cc6439fe5ab242899174
-      internalID: -1355419652
+      spriteID: 4a269c9b9216f2d459b6501ce0761470
+      internalID: 1114839506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_5
+      name: Goblin-Attack-Side_5
       rect:
         serializedVersion: 2
         x: 320
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 761d79bb742a650469375221154a87b8
-      internalID: 1389222595
+      spriteID: 0f684a42562ee694aa23635dc3305e81
+      internalID: 50043011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_6
+      name: Goblin-Attack-Side_6
       rect:
         serializedVersion: 2
         x: 384
@@ -263,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a15ff3dede008244ac1e665ad99360c
-      internalID: -1498898123
+      spriteID: 9bace8dd60af4764bbb92e2cc04288e7
+      internalID: 2073894016
       vertices: []
       indices: 
       edges: []
@@ -280,13 +280,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Goblin-Attack-Back_0: -1402440149
-      Goblin-Attack-Back_1: -354114555
-      Goblin-Attack-Back_2: 925598509
-      Goblin-Attack-Back_3: 840626134
-      Goblin-Attack-Back_4: -1355419652
-      Goblin-Attack-Back_5: 1389222595
-      Goblin-Attack-Back_6: -1498898123
+      Goblin-Attack-Side_0: -362526315
+      Goblin-Attack-Side_1: 521198130
+      Goblin-Attack-Side_2: 641298471
+      Goblin-Attack-Side_3: -444230244
+      Goblin-Attack-Side_4: 1114839506
+      Goblin-Attack-Side_5: 50043011
+      Goblin-Attack-Side_6: 2073894016
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

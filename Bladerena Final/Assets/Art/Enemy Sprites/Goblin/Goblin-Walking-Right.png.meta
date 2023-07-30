@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 021445551b80236418a2093a4ca07203
+guid: 48dc56f6d2d86744688f4ee282ad025b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Goblin-Attack-Back_0
+      name: Goblin-Walking-Side_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ffa3849498b8044ea9e014cd27bc3c0
-      internalID: -1402440149
+      spriteID: 0f714a68ef57c86439ce3c9652246214
+      internalID: 1852804612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_1
+      name: Goblin-Walking-Side_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 16
         y: 0
-        width: 64
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 646fc9bdc47eaff4abd1d9c85e899a4d
-      internalID: -354114555
+      spriteID: d6cb8cf9dc33cfe49bc112c35b54cedc
+      internalID: 567910876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_2
+      name: Goblin-Walking-Side_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 32
         y: 0
-        width: 64
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bbbd73be4987044bbb22412e229dba5
-      internalID: 925598509
+      spriteID: 78a1803b107071945a9ca0c5c6041f35
+      internalID: 2054533927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_3
+      name: Goblin-Walking-Side_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 48
         y: 0
-        width: 64
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,71 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7794045f89f93324cbd5dc1e9134665f
-      internalID: 840626134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin-Attack-Back_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a3ff7aa3469cc6439fe5ab242899174
-      internalID: -1355419652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin-Attack-Back_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 761d79bb742a650469375221154a87b8
-      internalID: 1389222595
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin-Attack-Back_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a15ff3dede008244ac1e665ad99360c
-      internalID: -1498898123
+      spriteID: 7643046eb2e5db0498e2ef328ee81b57
+      internalID: -1340587923
       vertices: []
       indices: 
       edges: []
@@ -280,13 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Goblin-Attack-Back_0: -1402440149
-      Goblin-Attack-Back_1: -354114555
-      Goblin-Attack-Back_2: 925598509
-      Goblin-Attack-Back_3: 840626134
-      Goblin-Attack-Back_4: -1355419652
-      Goblin-Attack-Back_5: 1389222595
-      Goblin-Attack-Back_6: -1498898123
+      Goblin-Walking-Side_0: 1852804612
+      Goblin-Walking-Side_1: 567910876
+      Goblin-Walking-Side_2: 2054533927
+      Goblin-Walking-Side_3: -1340587923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

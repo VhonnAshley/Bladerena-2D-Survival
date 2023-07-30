@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 021445551b80236418a2093a4ca07203
+guid: 0f7f51534b9f26b43b6f8e893e73ebb5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Goblin-Attack-Back_0
+      name: Goblin-Death-Side_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ffa3849498b8044ea9e014cd27bc3c0
-      internalID: -1402440149
+      spriteID: aeab8bc4016d92e4a8e72ee4fbe55697
+      internalID: 986307199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_1
+      name: Goblin-Death-Side_1
       rect:
         serializedVersion: 2
         x: 64
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 646fc9bdc47eaff4abd1d9c85e899a4d
-      internalID: -354114555
+      spriteID: 6a01f8d6802f4fe4998d1aaec2a7b966
+      internalID: 1416220391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_2
+      name: Goblin-Death-Side_2
       rect:
         serializedVersion: 2
         x: 128
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bbbd73be4987044bbb22412e229dba5
-      internalID: 925598509
+      spriteID: 42ba84587e9625c49baa555cd04a404e
+      internalID: 614613467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_3
+      name: Goblin-Death-Side_3
       rect:
         serializedVersion: 2
         x: 192
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7794045f89f93324cbd5dc1e9134665f
-      internalID: 840626134
+      spriteID: f2927072d0ba3e042b40fe37b008a19b
+      internalID: -332763809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_4
+      name: Goblin-Death-Side_4
       rect:
         serializedVersion: 2
         x: 256
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a3ff7aa3469cc6439fe5ab242899174
-      internalID: -1355419652
+      spriteID: 29246b81a1a7f4444b6c0965a9db00b6
+      internalID: 1163649710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_5
+      name: Goblin-Death-Side_5
       rect:
         serializedVersion: 2
         x: 320
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 761d79bb742a650469375221154a87b8
-      internalID: 1389222595
+      spriteID: 47a9649f87674a743a2ab1fd097950c0
+      internalID: 817908499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin-Attack-Back_6
+      name: Goblin-Death-Side_6
       rect:
         serializedVersion: 2
         x: 384
@@ -263,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a15ff3dede008244ac1e665ad99360c
-      internalID: -1498898123
+      spriteID: 0820bba85a412df4c89c4e9e24d38d30
+      internalID: -2143187253
       vertices: []
       indices: 
       edges: []
@@ -280,13 +280,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Goblin-Attack-Back_0: -1402440149
-      Goblin-Attack-Back_1: -354114555
-      Goblin-Attack-Back_2: 925598509
-      Goblin-Attack-Back_3: 840626134
-      Goblin-Attack-Back_4: -1355419652
-      Goblin-Attack-Back_5: 1389222595
-      Goblin-Attack-Back_6: -1498898123
+      Goblin-Death-Side_0: 986307199
+      Goblin-Death-Side_1: 1416220391
+      Goblin-Death-Side_2: 614613467
+      Goblin-Death-Side_3: -332763809
+      Goblin-Death-Side_4: 1163649710
+      Goblin-Death-Side_5: 817908499
+      Goblin-Death-Side_6: -2143187253
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

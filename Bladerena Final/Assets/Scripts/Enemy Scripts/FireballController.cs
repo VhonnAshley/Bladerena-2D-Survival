@@ -33,4 +33,26 @@ public class FireballController : MonoBehaviour
         // Update the blend tree parameter for horizontal movement
         animator.SetFloat("horizontalMovement", moveDirection.x);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Check if the player collided with the enemy
+            // You can add damage handling here if you want
+
+            // Call the Die() function to initiate the death process
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        // Play the death animation by setting the "isDead" parameter to true
+        animator.SetBool("isDead", true);
+
+        // Destroy the enemy GameObject after some time (adjust the delay as needed)
+        float deathAnimationDuration = 1.2f; // Replace with the actual duration of the death animation
+        Destroy(gameObject, deathAnimationDuration);
+    }
 }

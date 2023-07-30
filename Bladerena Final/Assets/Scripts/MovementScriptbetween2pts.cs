@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementScriptbetween2pts : MonoBehaviour
+public class MovementScriptbetween2pts : EnemyDamage
 {
     [Range(0,5)]
     public float objSpeed;

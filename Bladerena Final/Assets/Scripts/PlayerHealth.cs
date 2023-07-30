@@ -21,7 +21,9 @@ public class PlayerHealth : MonoBehaviour
 
         //rb.bodyType = RigidbodyType2D.Static;
         //Play Death Animation
-        Destroy(gameObject);
+
+        Debug.Log("Player Hit");
+        //Destroy(gameObject);
         //Show Game Over Screen
 
    

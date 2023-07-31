@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7a7c100bde11f924ab638184d5d4299e
+guid: 30ab7b47591ca0f4e88479c19280dee9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sworldiers-ProjectileAttack-Back_0
+      name: Sworldiers-MeleeAttack-FrontDown_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a25b428e09802244894c4b6819b752c5
-      internalID: 1591511035
+      spriteID: caca2219effbd884495fee273d2a924f
+      internalID: 1940162469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sworldiers-ProjectileAttack-Back_1
+      name: Sworldiers-MeleeAttack-FrontDown_1
       rect:
         serializedVersion: 2
         x: 64
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 020966b28c8239342a1b0501c4f34a64
-      internalID: -1759741266
+      spriteID: 2093f87540f1718499c630c8f6fabef9
+      internalID: -606196100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sworldiers-ProjectileAttack-Back_2
+      name: Sworldiers-MeleeAttack-FrontDown_2
       rect:
         serializedVersion: 2
         x: 128
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe60e57f94d024a4c850321d0c70cb15
-      internalID: -147583146
+      spriteID: c6ba0fb03f575d743a2b534f3835c019
+      internalID: -126688925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sworldiers-ProjectileAttack-Back_3
+      name: Sworldiers-MeleeAttack-FrontDown_3
       rect:
         serializedVersion: 2
         x: 192
@@ -187,8 +187,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 061fbb0e9e8a132418ae4cd0b62d61de
-      internalID: 768571791
+      spriteID: ce29e725af170cb468d2ffa9cf53c8f6
+      internalID: 2123234772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sworldiers-MeleeAttack-FrontDown_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270bdc1f0e4e65b4d94b0d4fa8c2fe0f
+      internalID: 1310497209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sworldiers-MeleeAttack-FrontDown_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6539afbc8e043b640b95b834d3d4de5b
+      internalID: 1938063883
       vertices: []
       indices: 
       edges: []
@@ -204,10 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sworldiers-ProjectileAttack-Back_0: 1591511035
-      Sworldiers-ProjectileAttack-Back_1: -1759741266
-      Sworldiers-ProjectileAttack-Back_2: -147583146
-      Sworldiers-ProjectileAttack-Back_3: 768571791
+      Sworldiers-MeleeAttack-FrontDown_0: 1940162469
+      Sworldiers-MeleeAttack-FrontDown_1: -606196100
+      Sworldiers-MeleeAttack-FrontDown_2: -126688925
+      Sworldiers-MeleeAttack-FrontDown_3: 2123234772
+      Sworldiers-MeleeAttack-FrontDown_4: 1310497209
+      Sworldiers-MeleeAttack-FrontDown_5: 1938063883
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

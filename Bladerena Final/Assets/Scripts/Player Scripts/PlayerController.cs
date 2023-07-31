@@ -30,11 +30,11 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
 
         // Check for left mouse button click and trigger the attack animation
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+     /*   if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             animator.SetBool("isAttacking", true);
             StartCoroutine(ResetAttackAnimation());
-        }
+        }*/
     }
 
     private void HandleInput()
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
         }
         
     }
-    private IEnumerator ResetAttackAnimation()
+   /* private IEnumerator ResetAttackAnimation()
     {
         // Set the isAttacking flag to true while the animation is playing
         isAttacking = true;
@@ -130,6 +130,6 @@ public class PlayerController : MonoBehaviour
 
         // Set the isAttacking flag to false when the animation is done
         isAttacking = false;
-    }
+    }*/
 
 }

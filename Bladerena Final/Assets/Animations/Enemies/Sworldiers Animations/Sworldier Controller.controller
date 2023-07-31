@@ -20,10 +20,10 @@ AnimatorStateMachine:
     m_Position: {x: 200, y: 390, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8465643724470541354}
-    m_Position: {x: 520, y: 140, z: 0}
+    m_Position: {x: 630, y: 400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8252817828291298038}
-    m_Position: {x: 480, y: 300, z: 0}
+    m_Position: {x: 560, y: 290, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -51,7 +51,7 @@ BlendTree:
     m_DirectBlendParameter: horizontalMovement
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
+    m_Motion: {fileID: 7400000, guid: b39ca802301aae54bb2a1c936e7f6f38, type: 2}
     m_Threshold: 0.33333334
     m_Position: {x: 0, y: -0.5}
     m_TimeScale: 1
@@ -67,7 +67,7 @@ BlendTree:
     m_DirectBlendParameter: horizontalMovement
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
+    m_Motion: {fileID: 7400000, guid: fc75368963365d143a09c26e2546fcc4, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 0.5}
     m_TimeScale: 1
@@ -220,9 +220,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.7058823
+  m_ExitTime: 1
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -399,7 +399,7 @@ BlendTree:
     m_DirectBlendParameter: horizontalMovement
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
+    m_Motion: {fileID: 7400000, guid: fc0134b6fce764f49beb68247001e1ad, type: 2}
     m_Threshold: 0.6666667
     m_Position: {x: 0, y: -0.5}
     m_TimeScale: 1
@@ -407,7 +407,7 @@ BlendTree:
     m_DirectBlendParameter: horizontalMovement
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
+    m_Motion: {fileID: 7400000, guid: 877666b45cecf0042b78db66f3be8325, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 0.5}
     m_TimeScale: 1
@@ -438,9 +438,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.7058823
+  m_ExitTime: 1
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0

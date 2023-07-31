@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class Health : MonoBehaviour
 {
     public int maxHealth = 1;
     public int currentHealth;
@@ -24,19 +24,17 @@ public class PlayerHealth : MonoBehaviour
 
         currentHealth = currentHealth - dmgAmount;
 
-        //rb.bodyType = RigidbodyType2D.Static;
-        //Play Death Animation
 
+        //Player Gonna die;
         if (currentHealth <= 0)
         {
             Debug.Log("Player Hit");
             anim.SetBool("isDead", true);
-            //rb.bodyType = RigidbodyType2D.Static;
-
-
         }
 
     }
+
+    
 
 
 

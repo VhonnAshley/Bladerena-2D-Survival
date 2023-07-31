@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikeDamage : EnemyDamage
+public class SpikeDamage : Damage
 {
      
     private BoxCollider2D boxCol2d;

@@ -12,15 +12,23 @@ public class PlayerCombat : MonoBehaviour
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
+    public float attackOffsetX = 0.1f;
+    public float attackOffsetY = 0.1f;
+
+
     public Transform attackPoint;
     public LayerMask enemyLayers;
 
     public float attackRange = 0.5f;
     public const float attackDamage = 1f;
 
+    private Vector2 lastDirection = Vector2.zero;
+
+
     private void Start()
     {
         anim = GetComponent<Animator>();
+        attackPoint = transform.Find("AttackPoint");
 
     }
 
@@ -28,12 +36,14 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
+      
 
         if (Time.time >= nextAttackTime) {
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {
               
-         
+               
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
 
@@ -46,28 +56,28 @@ public class PlayerCombat : MonoBehaviour
         
     }
 
-    public static Vector3 GetMouseWorldPosition()
+    public void SetAttackPointPosition(Vector2 direction)
     {
-        Vector3 vec = GetMouseWorldPositionWithZ(Input.mousePosition, Camera.main);
-        vec.z = 0f;
-        return vec;
-    }
-    public static Vector3 GetMouseWorldPositionWithZ()
-    {
-        return GetMouseWorldPositionWithZ(Input.mousePosition, Camera.main);
 
-    }
+        if (direction != Vector2.zero) // Only update the position if the direction is not zero (character is moving)
+        {
+            float attackOffsetX = 0.5f; // Adjust this value based on the offset of the attack point
+            float attackOffsetY = 0.5f;   // Adjust this value based on the offset of the attack point
 
-    public static Vector3 GetMouseWorldPositionWithZ(Camera worldCamera)
-    {
-        return GetMouseWorldPositionWithZ(Input.mousePosition, worldCamera);
+            attackPoint.localPosition = new Vector3(direction.x * attackOffsetX, direction.y * attackOffsetY, 0f);
+            lastDirection = direction; // Remember the last direction
+        }
     }
 
-    public static Vector3 GetMouseWorldPositionWithZ(Vector3 screenPosition, Camera worldCamera)
+    //Reset the attack point's position when going back to idle.
+    public void ResetAttackPointPosition()
     {
-        Vector3 worldPosition = worldCamera.ScreenToWorldPoint(screenPosition);
-        return worldPosition;
+        float attackOffsetX = 0.5f; // Adjust this value based on the offset of the attack point
+        float attackOffsetY = 0.5f;   // Adjust this value based on the offset of the attack point
+
+        attackPoint.localPosition = new Vector3(lastDirection.x * attackOffsetX, lastDirection.y * attackOffsetY, 0f);
     }
+
 
 
     void Attack()

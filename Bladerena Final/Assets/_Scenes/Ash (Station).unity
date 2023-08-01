@@ -405,7 +405,7 @@ MonoBehaviour:
   maxHealth: 1
   player: {fileID: 171237686}
   speed: 1
-  distanceBetween: 2
+  distanceBetween: 10
 --- !u!95 &366378594
 Animator:
   serializedVersion: 5

@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     // When player death animation plays, disable user input
     private bool isPlayerAlive = true; // New variable to track player's life state
 
+    public PlayerCombat pc;
+
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -35,12 +37,6 @@ public class PlayerController : MonoBehaviour
             HandleMovement();
         }
 
-        // Check for left mouse button click and trigger the attack animation
-     /*   if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            animator.SetBool("isAttacking", true);
-            StartCoroutine(ResetAttackAnimation());
-        }*/
     }
 
     private void HandleInput()
@@ -73,6 +69,9 @@ public class PlayerController : MonoBehaviour
 
         moveDir = new Vector2(moveX, moveY).normalized;
 
+
+        pc.SetAttackPointPosition(moveDir);
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             isDashButtonDown = true;
@@ -91,6 +90,7 @@ public class PlayerController : MonoBehaviour
             // Idle
             rigidbody2D.velocity = Vector2.zero;
             animator.SetBool("isMoving", false);
+            //pc.ResetAttackPointPosition();
         }
         else
         {

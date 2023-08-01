@@ -55,7 +55,8 @@ public class SwordlierController : MonoBehaviour
 
         // Determine if the enemy is moving or idle
         bool isMoving = moveDirection.magnitude > 0.1f;
-        animator.SetBool("isMoving", isMoving);
+    
+        animator.SetBool("isMoving", true);
     }
 
     public void TakeDamage(float damageAmount)

@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Swordlier : MonoBehaviour
+public class SwordlierController : MonoBehaviour
 {
+    // Enemy health
+    [SerializeField] float health, maxHealth = 2f;
+
     public GameObject player;
     public float speed;
     public float distanceBetween;
@@ -11,45 +14,71 @@ public class Swordlier : MonoBehaviour
     private float distance;
     private Animator animator;
 
+    // New variable to track if the enemy is following the player
+    private bool isFollowingPlayer = true;
+
     private void Start()
     {
+        // Health system
+        health = maxHealth;
+
         animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
-        direction.Normalize();
-
-        // Calculate the movement vector
-        Vector2 moveDirection = direction * speed * Time.deltaTime;
-
-        if (distance < distanceBetween)
+        if (isFollowingPlayer)
         {
-            // Move the goblin towards the player
-            transform.Translate(moveDirection);
-        }
+            distance = Vector2.Distance(transform.position, player.transform.position);
+            Vector2 direction = player.transform.position - transform.position;
+            direction.Normalize();
 
+            // Calculate the movement vector
+            Vector2 moveDirection = direction * speed * Time.deltaTime;
+
+            if (distance < distanceBetween)
+            {
+                // Move the goblin towards the player
+                transform.Translate(moveDirection);
+            }
+
+            // Update the blend tree parameters
+            UpdateAnimator(moveDirection);
+        }
+    }
+
+    private void UpdateAnimator(Vector2 moveDirection)
+    {
         // Update the blend tree parameters
         animator.SetFloat("horizontalMovement", moveDirection.x);
         animator.SetFloat("verticalMovement", moveDirection.y);
+
+        // Determine if the enemy is moving or idle
+        bool isMoving = moveDirection.magnitude > 0.1f;
+        animator.SetBool("isMoving", isMoving);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void TakeDamage(float damageAmount)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            // Check if the player collided with the enemy
-            // You can add damage handling here if you want
+        health -= damageAmount; // 3 -> 2 -> 1 -> 0 = Enemy has died
 
-            // Call the Die() function to initiate the death process
+        if (health <= 0)
+        {
             Die();
         }
     }
 
     private void Die()
     {
+        // Stop following the player when the enemy dies
+        isFollowingPlayer = false;
+
+        // Debug
+        Debug.Log("Enemy Swordlier died!");
+
+        // Disable the Collider component to prevent further collisions
+        GetComponent<PolygonCollider2D>().enabled = false;
+
         // Play the death animation by setting the "isDead" parameter to true
         animator.SetBool("isDead", true);
 

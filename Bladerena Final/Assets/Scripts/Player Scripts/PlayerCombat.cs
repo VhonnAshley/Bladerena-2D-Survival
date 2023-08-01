@@ -13,9 +13,10 @@ public class PlayerCombat : MonoBehaviour
     float nextAttackTime = 0f;
 
     public Transform attackPoint;
-    public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
+    public float attackRange = 0.5f;
+    public const float attackDamage = 1f;
 
     private void Start()
     {
@@ -80,8 +81,31 @@ public class PlayerCombat : MonoBehaviour
         //damage the enemy within enemy layers
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log("We hit" + enemy.name);
+            
+            // Check if the enemy has a FireballController component and call TakeDamage if it does
+            FireballController fireballController = enemy.GetComponent<FireballController>();
+            if (fireballController != null)
+            {
+                Debug.Log("We hit" + enemy.name);
+                fireballController.TakeDamage(attackDamage);
+            }
 
+            // Check if the enemy has a GoblinController component and call TakeDamage if it does
+            GoblinController goblinController = enemy.GetComponent<GoblinController>();
+            if (goblinController != null)
+            {
+                Debug.Log("We hit" + enemy.name);
+                goblinController.TakeDamage(attackDamage);
+            }
+
+            // Check if the enemy has a SwordlierController component and call TakeDamage if it does
+            SwordlierController swordlierController = enemy.GetComponent<SwordlierController>();
+            if (swordlierController != null)
+            {
+                Debug.Log("We hit" + enemy.name);
+                swordlierController.TakeDamage(attackDamage);
+            }
+            
         }
 
       

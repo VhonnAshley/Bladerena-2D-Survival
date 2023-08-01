@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     private bool isDashButtonDown;
     private bool isAttacking; // New variable to track the attack animation state
 
+    // When player death animation plays, disable user input
+    private bool isPlayerAlive = true; // New variable to track player's life state
+
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -26,8 +29,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        HandleInput();
-        HandleMovement();
+        if (isPlayerAlive)
+        {
+            HandleInput();
+            HandleMovement();
+        }
 
         // Check for left mouse button click and trigger the attack animation
      /*   if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -39,6 +45,12 @@ public class PlayerController : MonoBehaviour
 
     private void HandleInput()
     {
+        if (!isPlayerAlive)
+        {
+            // If the player is dead, don't handle any input
+            return;
+        }
+
         float moveX = 0f;
         float moveY = 0f;
 
@@ -117,19 +129,54 @@ public class PlayerController : MonoBehaviour
         }
         
     }
-   /* private IEnumerator ResetAttackAnimation()
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Set the isAttacking flag to true while the animation is playing
-        isAttacking = true;
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            // Check if the player collided with the enemy
+            // You can add damage handling here if you want
 
-        // Wait for the attack animation to finish playing
-        yield return new WaitForSeconds(ATTACK_ANIMATION_DURATION);
+            // Call the Die() function to initiate the death process
+            Die();
+        }
+    }
+    private void Die()
+    {
+        // Debug
+        Debug.Log("Player has died!");
 
-        // Set the "isAttacking" parameter back to false
-        animator.SetBool("isAttacking", false);
+        // Play the death animation by setting the "isDead" parameter to true
+        animator.SetBool("isDead", true);
 
-        // Set the isAttacking flag to false when the animation is done
-        isAttacking = false;
-    }*/
+        // Set the isPlayerAlive flag to false when the player dies
+        isPlayerAlive = false;
+
+        // Freeze the player's movement by setting Rigidbody2D constraints
+        rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+
+        // Disable the BoxCollider component to prevent further collisions
+        GetComponent<BoxCollider2D>().enabled = false;
+
+        // Destroy the enemy GameObject after some time (adjust the delay as needed)
+        float deathAnimationDuration = 3f; // Replace with the actual duration of the death animation
+        Destroy(gameObject, deathAnimationDuration);
+    }
+
+
+    /* private IEnumerator ResetAttackAnimation()
+     {
+         // Set the isAttacking flag to true while the animation is playing
+         isAttacking = true;
+
+         // Wait for the attack animation to finish playing
+         yield return new WaitForSeconds(ATTACK_ANIMATION_DURATION);
+
+         // Set the "isAttacking" parameter back to false
+         animator.SetBool("isAttacking", false);
+
+         // Set the isAttacking flag to false when the animation is done
+         isAttacking = false;
+     }*/
 
 }

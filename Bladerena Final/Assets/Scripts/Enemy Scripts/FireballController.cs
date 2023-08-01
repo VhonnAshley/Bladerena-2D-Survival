@@ -4,50 +4,69 @@ using UnityEngine;
 
 public class FireballController : MonoBehaviour
 {
+    // Enemy health
+    [SerializeField] float health, maxHealth = 2f;
+
     public GameObject player;
     public float speed;
 
     private float distance;
     private Animator animator;
 
+    // New variable to track if the enemy is following the player
+    private bool isFollowingPlayer = true;
+
     private void Start()
     {
+        // Health system
+        health = maxHealth;
+
         animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
-        direction.Normalize();
+        if (isFollowingPlayer)
+        {
+            distance = Vector2.Distance(transform.position, player.transform.position);
+            Vector2 direction = player.transform.position - transform.position;
+            direction.Normalize();
 
-        // Calculate the movement vector
-        Vector2 moveDirection = direction * speed * Time.deltaTime;
+            // Calculate the movement vector
+            Vector2 moveDirection = direction * speed * Time.deltaTime;
 
-        // Move the Fireball towards the player
-        transform.Translate(moveDirection);
+            // Move the Fireball towards the player
+            transform.Translate(moveDirection);
 
-        // Set the isMoving parameter in the animator based on the magnitude of moveDirection
-        animator.SetBool("isMoving", moveDirection.magnitude > 0f);
+            // Set the isMoving parameter in the animator based on the magnitude of moveDirection
+            animator.SetBool("isMoving", moveDirection.magnitude > 0f);
 
-        // Update the blend tree parameter for horizontal movement
-        animator.SetFloat("horizontalMovement", moveDirection.x);
+            // Update the blend tree parameter for horizontal movement
+            animator.SetFloat("horizontalMovement", moveDirection.x);
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void TakeDamage(float damageAmount)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            // Check if the player collided with the enemy
-            // You can add damage handling here if you want
+        health -= damageAmount; // 3 -> 2 -> 1 -> 0 = Enemy has died
 
-            // Call the Die() function to initiate the death process
+        if (health <= 0)
+        {
             Die();
         }
     }
 
     private void Die()
     {
+        // Stop following the player when the enemy dies
+        isFollowingPlayer = false;
+
+        // Debug
+        Debug.Log("Enemy Fireball died!");
+
+        // Disable the BoxCollider component to prevent further collisions
+        GetComponent<BoxCollider2D>().enabled = false;
+
         // Play the death animation by setting the "isDead" parameter to true
         animator.SetBool("isDead", true);
 

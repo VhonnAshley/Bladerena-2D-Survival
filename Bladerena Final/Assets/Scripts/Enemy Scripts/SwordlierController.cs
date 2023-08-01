@@ -29,6 +29,9 @@ public class SwordlierController : MonoBehaviour
     {
         if (isFollowingPlayer)
         {
+            // Enemy health
+            // [SerializeField] float health, maxHealth = 3f; // Remove this line, it should not be here
+
             distance = Vector2.Distance(transform.position, player.transform.position);
             Vector2 direction = player.transform.position - transform.position;
             direction.Normalize();
@@ -40,22 +43,17 @@ public class SwordlierController : MonoBehaviour
             {
                 // Move the goblin towards the player
                 transform.Translate(moveDirection);
+                animator.SetBool("isMoving", true);
+            }
+            if (distance > distanceBetween)
+            {
+                animator.SetBool("isMoving", false);
             }
 
             // Update the blend tree parameters
-            UpdateAnimator(moveDirection);
+            animator.SetFloat("horizontalMovement", moveDirection.x);
+            animator.SetFloat("verticalMovement", moveDirection.y);
         }
-    }
-
-    private void UpdateAnimator(Vector2 moveDirection)
-    {
-        // Update the blend tree parameters
-        animator.SetFloat("horizontalMovement", moveDirection.x);
-        animator.SetFloat("verticalMovement", moveDirection.y);
-
-        // Determine if the enemy is moving or idle
-        bool isMoving = moveDirection.magnitude > 0.1f;
-        animator.SetBool("isMoving", isMoving);
     }
 
     public void TakeDamage(float damageAmount)

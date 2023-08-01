@@ -27,42 +27,33 @@ public class GoblinController : MonoBehaviour
 
     private void Update()
     {
-        // Check the distance to the player and determine if the enemy should follow or not
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        isFollowingPlayer = distance < distanceBetween;
-
         if (isFollowingPlayer)
         {
+            // Enemy health
+            // [SerializeField] float health, maxHealth = 3f; // Remove this line, it should not be here
+
+            distance = Vector2.Distance(transform.position, player.transform.position);
             Vector2 direction = player.transform.position - transform.position;
             direction.Normalize();
 
             // Calculate the movement vector
             Vector2 moveDirection = direction * speed * Time.deltaTime;
 
-            // Move the goblin towards the player
-            GetComponent<Rigidbody2D>().velocity = moveDirection;
+            if (distance < distanceBetween)
+            {
+                // Move the goblin towards the player
+                transform.Translate(moveDirection);
+                animator.SetBool("isMoving", true);
+            }
+            if (distance > distanceBetween)
+            {
+                animator.SetBool("isMoving", false);
+            }
 
             // Update the blend tree parameters
-            UpdateAnimator(moveDirection);
+            animator.SetFloat("horizontalMovement", moveDirection.x);
+            animator.SetFloat("verticalMovement", moveDirection.y);
         }
-        else
-        {
-            // Stop the goblin if the player is too far away
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            // Update the blend tree parameters with a zero moveDirection
-            UpdateAnimator(Vector2.zero);
-        }
-    }
-
-    private void UpdateAnimator(Vector2 moveDirection)
-    {
-        // Update the blend tree parameters
-        animator.SetFloat("horizontalMovement", moveDirection.x);
-        animator.SetFloat("verticalMovement", moveDirection.y);
-
-        // Determine if the enemy is moving or idle
-        bool isMoving = moveDirection.magnitude > 0.1f;
-        animator.SetBool("isMoving", isMoving);
     }
 
     public void TakeDamage(float damageAmount)

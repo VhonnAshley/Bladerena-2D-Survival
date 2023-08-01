@@ -8,7 +8,7 @@ public class SwordProjectileScript : MonoBehaviour
     public float speed;
     Rigidbody2D bulletRB;
 
-    public Collider2D enemyCollider;
+    
 
     // Start is called before the first frame update
     void Start()

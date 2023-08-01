@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,8 @@ public class SwordlierController : MonoBehaviour
     private float nextFireTime;
     public float attackRange;
 
+
+
     //private float distance;
     private Animator animator;
 
@@ -25,21 +28,39 @@ public class SwordlierController : MonoBehaviour
     // New variable to track if the enemy is following the player
     private bool isFollowingPlayer = true;
 
+    private float initialMoveDuration = 6f;
+    private float initialMoveTime;
+   // private bool iniFollow = false;
+
+
     private void Start()
     {
         // Health system
         health = maxHealth;
-
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogError("Player GameObject not found! Make sure the player has the 'Player' tag.");
+        }
         animator = GetComponent<Animator>();
         eCombat = GetComponent<EnemyCombat>();
+
+        initialMoveTime = Time.time;
     }
 
     private void Update()
     {
 
-
-        if (isFollowingPlayer)
+        if (Time.time <= initialMoveTime + initialMoveDuration)
         {
+            // Initial move duration hasn't passed yet, move towards the player
+            MoveTowardsPlayer();
+            
+        }
+        else if(isFollowingPlayer)
+        {
+            // Initial move duration has passed, stop following the player and proceed with usual logic
+
             float distance = Vector2.Distance(transform.position, player.transform.position);
             Vector2 direction = player.transform.position - transform.position;
             direction.Normalize();
@@ -64,7 +85,7 @@ public class SwordlierController : MonoBehaviour
             {
 
                 animator.SetBool("isProjectile", false);
-               
+
             }
             else
             {
@@ -104,7 +125,32 @@ public class SwordlierController : MonoBehaviour
             // Update the blend tree parameters
             animator.SetFloat("horizontalMovement", moveDirection.x);
             animator.SetFloat("verticalMovement", moveDirection.y);
+
+
+
         }
+
+
+      /*  if (isFollowingPlayer)
+        {
+     
+        }*/
+    }
+
+    private void MoveTowardsPlayer()
+    {
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+        Vector2 direction = player.transform.position - transform.position;
+        direction.Normalize();
+        eCombat.SetAttackPointPosition(direction);
+        Vector2 moveDirection = direction * speed * Time.deltaTime;
+        transform.Translate(moveDirection);
+        animator.SetBool("isMoving", true);
+
+        animator.SetFloat("horizontalMovement", moveDirection.x);
+        animator.SetFloat("verticalMovement", moveDirection.y);
+
+
     }
 
     private void UpdateAnimator(Vector2 moveDirection)
@@ -155,7 +201,7 @@ public class SwordlierController : MonoBehaviour
         
         Gizmos.DrawWireSphere(transform.position, distanceBetween);
         Gizmos.DrawWireSphere(transform.position, shootingRange);
-
+  
     }
 
 

@@ -19,10 +19,28 @@ public class GoblinController : MonoBehaviour
     // New variable to track if the enemy is following the player
     private bool isFollowingPlayer = true;
 
+    GameObject target;
+
+
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogError("Player GameObject not found! Make sure the player has the 'Player' tag.");
+        }
+    }
+
     private void Start()
     {
         // Health system
         health = maxHealth;
+
+       
+
+        target = GameObject.FindGameObjectWithTag("Player");
+        Vector2 moveDir = (target.transform.position - transform.position).normalized * speed;
+
         eCombat = GetComponent<EnemyCombat>();
 
         animator = GetComponent<Animator>();

@@ -99,7 +99,7 @@ Transform:
   - {fileID: 5485963613258251096}
   - {fileID: 2597800994425682199}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1348430704460958301
 SpriteRenderer:
@@ -267,7 +267,7 @@ MonoBehaviour:
   health: 0
   maxHealth: 1
   player: {fileID: 0}
-  speed: 1.56
+  speed: 3
   distanceBetween: 5
   shootingRange: 7
   projectile: {fileID: 2883660524326430265, guid: 1f3a97d02e27453408bef33143770b68, type: 3}

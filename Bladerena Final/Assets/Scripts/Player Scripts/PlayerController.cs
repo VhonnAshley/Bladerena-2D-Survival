@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
         moveDir = new Vector2(moveX, moveY).normalized;
 
-
+        //Give the direction to the player combat script to determine where the player is facing and transform the attackpoint
         pc.SetAttackPointPosition(moveDir);
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
             // Idle
             rigidbody2D.velocity = Vector2.zero;
             animator.SetBool("isMoving", false);
-            //pc.ResetAttackPointPosition();
+            
         }
         else
         {
@@ -130,18 +130,22 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    //if enemy hit player
+  /*  private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             // Check if the player collided with the enemy
             // You can add damage handling here if you want
-
             // Call the Die() function to initiate the death process
             Die();
         }
-    }
-    private void Die()
+    }*/
+
+
+
+    public void Die()
     {
         // Debug
         Debug.Log("Player has died!");
@@ -164,19 +168,5 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    /* private IEnumerator ResetAttackAnimation()
-     {
-         // Set the isAttacking flag to true while the animation is playing
-         isAttacking = true;
-
-         // Wait for the attack animation to finish playing
-         yield return new WaitForSeconds(ATTACK_ANIMATION_DURATION);
-
-         // Set the "isAttacking" parameter back to false
-         animator.SetBool("isAttacking", false);
-
-         // Set the isAttacking flag to false when the animation is done
-         isAttacking = false;
-     }*/
-
+  
 }

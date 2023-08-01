@@ -31,7 +31,7 @@ public class ArrowProjectile : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Health>().Damage(1);
+            collision.gameObject.GetComponent<PlayerController>().Die();
             gameObject.SetActive(false);
         }
         gameObject.SetActive(false);

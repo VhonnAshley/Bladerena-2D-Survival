@@ -14,6 +14,7 @@ public class GoblinController : MonoBehaviour
 
     private float distance;
     private Animator animator;
+    private EnemyCombat eCombat;
 
     // New variable to track if the enemy is following the player
     private bool isFollowingPlayer = true;
@@ -22,6 +23,7 @@ public class GoblinController : MonoBehaviour
     {
         // Health system
         health = maxHealth;
+        eCombat = GetComponent<EnemyCombat>();
 
         animator = GetComponent<Animator>();
     }
@@ -33,6 +35,10 @@ public class GoblinController : MonoBehaviour
             distance = Vector2.Distance(transform.position, player.transform.position);
             Vector2 direction = player.transform.position - transform.position;
             direction.Normalize();
+
+
+
+            eCombat.SetAttackPointPosition(direction);
 
             // Calculate the movement vector
             Vector2 moveDirection = direction * speed * Time.deltaTime;

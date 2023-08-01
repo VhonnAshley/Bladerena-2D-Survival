@@ -65,7 +65,7 @@ public class SwordlierController : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD
+
     private void UpdateAnimator(Vector2 moveDirection)
     {
         // Update the blend tree parameters
@@ -78,8 +78,7 @@ public class SwordlierController : MonoBehaviour
         animator.SetBool("isMoving", true);
     }
 
-=======
->>>>>>> f02a4baea92374f94cf583ff5691f35975103b1c
+
     public void TakeDamage(float damageAmount)
     {
         health -= damageAmount; // 3 -> 2 -> 1 -> 0 = Enemy has died

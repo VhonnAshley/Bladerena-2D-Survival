@@ -65,7 +65,10 @@ public class SwordlierController : MonoBehaviour
         }
     }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     private void UpdateAnimator(Vector2 moveDirection)
     {
         // Update the blend tree parameters
@@ -78,7 +81,10 @@ public class SwordlierController : MonoBehaviour
         animator.SetBool("isMoving", true);
     }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     public void TakeDamage(float damageAmount)
     {
         health -= damageAmount; // 3 -> 2 -> 1 -> 0 = Enemy has died

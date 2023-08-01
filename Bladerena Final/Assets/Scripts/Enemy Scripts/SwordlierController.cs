@@ -10,6 +10,7 @@ public class SwordlierController : MonoBehaviour
     public GameObject player;
     public float speed;
     public float distanceBetween;
+    public float attackRange;
 
     private float distance;
     private Animator animator;
@@ -29,9 +30,6 @@ public class SwordlierController : MonoBehaviour
     {
         if (isFollowingPlayer)
         {
-            // Enemy health
-            // [SerializeField] float health, maxHealth = 3f; // Remove this line, it should not be here
-
             distance = Vector2.Distance(transform.position, player.transform.position);
             Vector2 direction = player.transform.position - transform.position;
             direction.Normalize();
@@ -44,10 +42,21 @@ public class SwordlierController : MonoBehaviour
                 // Move the goblin towards the player
                 transform.Translate(moveDirection);
                 animator.SetBool("isMoving", true);
+
+                // Check if the distance is close enough to attack
+                if (distance < attackRange)
+                {
+                    animator.SetBool("isAttacking", true);
+                }
+                else
+                {
+                    animator.SetBool("isAttacking", false);
+                }
             }
-            if (distance > distanceBetween)
+            else
             {
                 animator.SetBool("isMoving", false);
+                animator.SetBool("isAttacking", false);
             }
 
             // Update the blend tree parameters

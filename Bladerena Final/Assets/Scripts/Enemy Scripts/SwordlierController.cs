@@ -30,7 +30,10 @@ public class SwordlierController : MonoBehaviour
 
     private float initialMoveDuration = 6f;
     private float initialMoveTime;
-   // private bool iniFollow = false;
+    // private bool iniFollow = false;
+
+    // Declarations for scoreCounter
+    public int value;
 
 
     private void Start()
@@ -192,6 +195,9 @@ public class SwordlierController : MonoBehaviour
         // Destroy the enemy GameObject after some time (adjust the delay as needed)
         float deathAnimationDuration = 2f; // Replace with the actual duration of the death animation
         Destroy(gameObject, deathAnimationDuration);
+
+        // Trigger the scoreCount event when the goblin dies
+        ScoreCounter.Instance.IncreaseScore(value);
     }
 
     private void OnDrawGizmosSelected()

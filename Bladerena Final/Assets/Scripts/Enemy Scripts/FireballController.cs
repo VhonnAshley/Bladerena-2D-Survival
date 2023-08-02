@@ -17,10 +17,19 @@ public class FireballController : MonoBehaviour
     // New variable to track if the enemy is following the player
     private bool isFollowingPlayer = true;
 
+    // Declarations for scoreCount
+    public int value;
+
     private void Start()
     {
         // Health system
         health = maxHealth;
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogError("Player GameObject not found! Make sure the player has the 'Player' tag.");
+        }
 
         animator = GetComponent<Animator>();
     }
@@ -80,5 +89,8 @@ public class FireballController : MonoBehaviour
         // Destroy the enemy GameObject after some time (adjust the delay as needed)
         float deathAnimationDuration = 1.2f; // Replace with the actual duration of the death animation
         Destroy(gameObject, deathAnimationDuration);
+
+        // Trigger the scoreCount event when the goblin dies
+        ScoreCounter.Instance.IncreaseScore(value);
     }
 }

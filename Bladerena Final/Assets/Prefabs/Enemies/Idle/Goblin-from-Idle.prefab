@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 8477229336630561672}
   - component: {fileID: 976081665378986462}
   m_Layer: 6
-  m_Name: Goblin
+  m_Name: Goblin-from-Idle
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,6 +159,7 @@ MonoBehaviour:
   speed: 4
   distanceBetween: 10
   attackRange: 1
+  value: 5
 --- !u!61 &8477229336630561672
 BoxCollider2D:
   m_ObjectHideFlags: 0

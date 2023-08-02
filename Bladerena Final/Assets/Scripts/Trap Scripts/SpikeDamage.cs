@@ -6,19 +6,18 @@ public class SpikeDamage : Damage
 {
      
     private BoxCollider2D boxCol2d;
-    private AudioSource audSource;
 
     // Start is called before the first frame update
     void Start()
     {
         
         boxCol2d = GetComponent<BoxCollider2D>();
-        audSource = GetComponent<AudioSource>();
     }
 
     public void ShowCollider() {
 
-        audSource.Play();
+        // Play SFX
+        AudioManager.Instance.PlaySFX("spike");
         boxCol2d.enabled = true;
     }
 

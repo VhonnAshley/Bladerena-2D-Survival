@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MenuCtrl : MonoBehaviour
 {
+    // Declaration for music control in _Menu
+    [SerializeField] AudioSource music;
+
     // Declare game object for showing-hiding buttons
     public GameObject objectToShow;
     public GameObject objectToHide;
-
-    // Declare variables for audio control
-    public Sound[] musicSounds, sfxsounds;
-    public AudioSource musicSource, sfxSource;
 
     public void LoadScene(string sceneName)
     {
@@ -39,5 +38,13 @@ public class MenuCtrl : MonoBehaviour
         }
     }
 
+    public void onMusic()
+    {
+        music.Play();
+    }
+    public void offMusic()
+    {
+        music.Stop();
+    }
 
 }

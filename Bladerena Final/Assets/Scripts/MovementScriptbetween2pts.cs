@@ -23,8 +23,6 @@ public class MovementScriptbetween2pts : Damage
     int pointCount;
     int direction = 1;
 
-    private AudioSource audioSourc;
-
 
     private void Awake()
     {
@@ -38,7 +36,6 @@ public class MovementScriptbetween2pts : Damage
 
     private void Start()
     {
-        audioSourc = GetComponent<AudioSource>();
         pointCount = wayPoints.Length;
         pointIndex = 1;
         targetPos = wayPoints[pointIndex].transform.position;
@@ -51,7 +48,7 @@ public class MovementScriptbetween2pts : Damage
         transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
         if (transform.position == targetPos)
         {
-            audioSourc.Play();
+            AudioManager.Instance.PlaySFX("saw");
             NextPoint();
 
         }

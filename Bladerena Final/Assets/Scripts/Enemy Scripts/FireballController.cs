@@ -20,10 +20,26 @@ public class FireballController : MonoBehaviour
     // Declarations for scoreCount
     public int value;
 
+    private GameObject HomingSFX; 
+    private GameObject BurningSFX; 
+    private GameObject ExplodingSFX; 
+
+    private AudioSource audSourceHoming;
+    private AudioSource audioSourceBurning;
+    private AudioSource audioSourceExploding;
+
     private void Start()
     {
         // Health system
         health = maxHealth;
+
+        HomingSFX = transform.GetChild(0).gameObject;
+        BurningSFX = transform.GetChild(1).gameObject;
+        ExplodingSFX = transform.GetChild(2).gameObject;
+
+        audSourceHoming = HomingSFX.GetComponent<AudioSource>();
+        audioSourceBurning = BurningSFX.GetComponent<AudioSource>();
+        audioSourceExploding = ExplodingSFX.GetComponent<AudioSource>();
 
         player = GameObject.FindGameObjectWithTag("Player");
         if (player == null)
@@ -48,6 +64,7 @@ public class FireballController : MonoBehaviour
             if (distance < distanceBetween)
             {
                 // Move the goblin towards the player
+                audSourceHoming.Play();
                 transform.Translate(moveDirection);
                 animator.SetBool("isMoving", true);
             }
@@ -72,6 +89,17 @@ public class FireballController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Check if the collision is with the player
+            // Call the Die() function of the player when hit by the fireball
+            collision.gameObject.GetComponent<PlayerController>().Die();
+            audioSourceExploding.Play();
+        }
+    }
+
     private void Die()
     {
         // Stop following the player when the enemy dies
@@ -84,6 +112,7 @@ public class FireballController : MonoBehaviour
         GetComponent<BoxCollider2D>().enabled = false;
 
         // Play the death animation by setting the "isDead" parameter to true
+        audioSourceBurning.Play();
         animator.SetBool("isDead", true);
 
         // Destroy the enemy GameObject after some time (adjust the delay as needed)
@@ -93,4 +122,7 @@ public class FireballController : MonoBehaviour
         // Trigger the scoreCount event when the goblin dies
         ScoreCounter.Instance.IncreaseScore(value);
     }
+
+
+
 }

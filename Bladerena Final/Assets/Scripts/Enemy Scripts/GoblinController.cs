@@ -19,7 +19,7 @@ public class GoblinController : MonoBehaviour
     // New variable to track if the enemy is following the player
     private bool isFollowingPlayer = true;
 
-    private float initialMoveDuration = 1f;
+    private float initialMoveDuration = 2f;
     private float initialMoveTime;
 
     // Declarations for scoreCounter
@@ -75,6 +75,7 @@ public class GoblinController : MonoBehaviour
 
         else if (isFollowingPlayer)
         {
+            player = GameObject.FindGameObjectWithTag("Player");
             distance = Vector2.Distance(transform.position, player.transform.position);
             Vector2 direction = player.transform.position - transform.position;
             direction.Normalize();

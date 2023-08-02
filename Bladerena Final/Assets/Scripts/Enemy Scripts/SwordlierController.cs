@@ -26,7 +26,7 @@ public class SwordlierController : MonoBehaviour
     // New variable to track if the enemy is following the player
     private bool isFollowingPlayer = true;
 
-    private float initialMoveDuration = 1f;
+    private float initialMoveDuration = 3f;
     private float initialMoveTime;
  
 
@@ -74,7 +74,7 @@ public class SwordlierController : MonoBehaviour
         else if(isFollowingPlayer)
         {
             // Initial move duration has passed, stop following the player and proceed with usual logic
-
+            player = GameObject.FindGameObjectWithTag("Player");
             float distance = Vector2.Distance(transform.position, player.transform.position);
             Vector2 direction = player.transform.position - transform.position;
             direction.Normalize();

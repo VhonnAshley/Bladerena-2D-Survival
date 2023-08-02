@@ -11950,7 +11950,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e942800a8b2844fb462b91ce6f0a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: []
+  enemies:
+  - enemyPrefab: {fileID: 4282007759546735950, guid: dba94cf3086663e41ab2f7f6a673ac61, type: 3}
+    cost: 1
   currWave: 1
   enemiesToSpawn: []
   spawnLocation: {fileID: 1070939492}
@@ -29905,7 +29907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8657678787353376190, guid: 7e83ccd314a26494b94102803f589e81, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

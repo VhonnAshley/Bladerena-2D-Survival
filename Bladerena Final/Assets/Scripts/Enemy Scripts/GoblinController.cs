@@ -19,37 +19,43 @@ public class GoblinController : MonoBehaviour
     // New variable to track if the enemy is following the player
     private bool isFollowingPlayer = true;
 
-    // Declarations for scoreCount
-    public int value;
 
-    GameObject target;
+    private float initialMoveDuration = 6f;
+    private float initialMoveTime;
 
 
-    private void Awake()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null)
-        {
-            Debug.LogError("Player GameObject not found! Make sure the player has the 'Player' tag.");
-        }
-    }
 
     private void Start()
     {
         // Health system
         health = maxHealth;
 
-        target = GameObject.FindGameObjectWithTag("Player");
-        Vector2 moveDir = (target.transform.position - transform.position).normalized * speed;
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogError("Player GameObject not found! Make sure the player has the 'Player' tag.");
+        }
+
 
         eCombat = GetComponent<EnemyCombat>();
 
         animator = GetComponent<Animator>();
+
+        initialMoveTime = Time.time;
     }
 
     private void Update()
     {
-        if (isFollowingPlayer)
+
+        if (Time.time <= initialMoveTime + initialMoveDuration)
+        {
+            // Initial move duration hasn't passed yet, move towards the player
+            MoveTowardsPlayer();
+
+        }
+
+
+        else if (isFollowingPlayer)
         {
             distance = Vector2.Distance(transform.position, player.transform.position);
             Vector2 direction = player.transform.position - transform.position;
@@ -90,6 +96,23 @@ public class GoblinController : MonoBehaviour
         }
     }
 
+        private void MoveTowardsPlayer()
+    {
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+        Vector2 direction = player.transform.position - transform.position;
+        direction.Normalize();
+        eCombat.SetAttackPointPosition(direction);
+        Vector2 moveDirection = direction * speed * Time.deltaTime;
+        transform.Translate(moveDirection);
+        animator.SetBool("isMoving", true);
+
+        animator.SetFloat("horizontalMovement", moveDirection.x);
+        animator.SetFloat("verticalMovement", moveDirection.y);
+
+
+    }
+
+
     public void TakeDamage(float damageAmount)
     {
         health -= damageAmount; // 3 -> 2 -> 1 -> 0 = Enemy has died
@@ -117,8 +140,5 @@ public class GoblinController : MonoBehaviour
         // Destroy the enemy GameObject after some time (adjust the delay as needed)
         float deathAnimationDuration = 2f; // Replace with the actual duration of the death animation
         Destroy(gameObject, deathAnimationDuration);
-
-        // Trigger the scoreCount event when the goblin dies
-        ScoreCounter.Instance.IncreaseScore(value);
     }
 }

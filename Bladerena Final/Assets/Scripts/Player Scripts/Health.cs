@@ -11,11 +11,14 @@ public class Health : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
+    private PlayerController pc;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        pc = GetComponent<PlayerController>();
 
         currentHealth = maxHealth;
     }
@@ -27,8 +30,8 @@ public class Health : MonoBehaviour
         //Player Gonna die;
         if (currentHealth <= 0)
         {
-            Debug.Log("Player Hit");
-            anim.SetBool("isDead", true);
+            pc.Die();
+
         }
 
     }

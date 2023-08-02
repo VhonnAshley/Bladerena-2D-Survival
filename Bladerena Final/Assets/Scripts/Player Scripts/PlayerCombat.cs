@@ -24,12 +24,17 @@ public class PlayerCombat : MonoBehaviour
 
     private Vector2 lastDirection = Vector2.zero;
 
+    private GameObject AtkSFX;
+    private AudioSource audSourceAtk;
+
+
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         attackPoint = transform.Find("AttackPoint");
-
+        AtkSFX = transform.GetChild(2).gameObject;
+        audSourceAtk = AtkSFX.GetComponent<AudioSource>();
     }
 
 
@@ -81,6 +86,7 @@ public class PlayerCombat : MonoBehaviour
     void Attack()
     {
         //Attack Animation
+        audSourceAtk.Play();
         anim.SetTrigger("Attack");
 
         //Detect enemies in range of attack

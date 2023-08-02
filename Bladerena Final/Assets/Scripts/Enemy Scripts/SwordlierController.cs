@@ -20,24 +20,35 @@ public class SwordlierController : MonoBehaviour
     public float attackRange;
 
 
-
-    //private float distance;
     private Animator animator;
 
     private EnemyCombat eCombat;
     // New variable to track if the enemy is following the player
     private bool isFollowingPlayer = true;
 
-    private float initialMoveDuration = 6f;
+    private float initialMoveDuration = 1f;
     private float initialMoveTime;
-    // private bool iniFollow = false;
+ 
 
     // Declarations for scoreCounter
     public int value;
 
+    private GameObject MeleeSFX;
+    private GameObject ProjectileSFX;
+
+    private AudioSource audSourceMelee;
+    private AudioSource audioSourceProjectile;
+
+
 
     private void Start()
     {
+        MeleeSFX = transform.GetChild(2).gameObject;
+        ProjectileSFX = transform.GetChild(3).gameObject;
+        audSourceMelee = MeleeSFX.GetComponent<AudioSource>();
+        audioSourceProjectile = ProjectileSFX.GetComponent<AudioSource>();
+
+
         // Health system
         health = maxHealth;
         player = GameObject.FindGameObjectWithTag("Player");
@@ -79,6 +90,7 @@ public class SwordlierController : MonoBehaviour
             {
                 if (Time.time >= nextFireTime)
                 {
+                    audioSourceProjectile.Play();
                     animator.SetBool("isProjectile", true);
                     SpawnProjectile();
                     nextFireTime = Time.time + firerate;
@@ -109,6 +121,7 @@ public class SwordlierController : MonoBehaviour
                 // Check if the distance is close enough to attack
                 if (distance < attackRange)
                 {
+                    audSourceMelee.Play();
                     animator.SetBool("isAttacking", true);
                 }
                 else

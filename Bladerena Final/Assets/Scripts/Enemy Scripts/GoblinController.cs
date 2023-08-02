@@ -19,17 +19,34 @@ public class GoblinController : MonoBehaviour
     // New variable to track if the enemy is following the player
     private bool isFollowingPlayer = true;
 
-    private float initialMoveDuration = 6f;
+    private float initialMoveDuration = 1f;
     private float initialMoveTime;
 
     // Declarations for scoreCounter
     public int value;
+
+    private GameObject DeathSFX;
+    private GameObject GrowlSFX;
+    private GameObject StabSFX;
+
+    private AudioSource audSourceDeath;
+    private AudioSource audSourceGrowl;
+    private AudioSource audSourceStab;
 
 
     private void Start()
     {
         // Health system
         health = maxHealth;
+
+        DeathSFX = transform.GetChild(3).gameObject;
+        GrowlSFX = transform.GetChild(1).gameObject;
+        StabSFX = transform.GetChild(2).gameObject;
+
+        audSourceDeath = DeathSFX.GetComponent<AudioSource>();
+        audSourceGrowl = GrowlSFX.GetComponent<AudioSource>();
+        audSourceStab = StabSFX.GetComponent<AudioSource>();
+
 
         player = GameObject.FindGameObjectWithTag("Player");
         if (player == null)
@@ -73,11 +90,13 @@ public class GoblinController : MonoBehaviour
             {
                 // Move the goblin towards the player
                 transform.Translate(moveDirection);
+                audSourceGrowl.Play();
                 animator.SetBool("isMoving", true);
 
                 // Check if the distance is close enough to attack
                 if (distance < attackRange)
                 {
+                    audSourceStab.Play();
                     animator.SetBool("isAttacking", true);
                 }
                 else
@@ -128,7 +147,7 @@ public class GoblinController : MonoBehaviour
     {
         // Stop following the player when the enemy dies
         isFollowingPlayer = false;
-
+        audSourceDeath.Play();
         // Debug
         Debug.Log("Enemy Goblin died!");
 

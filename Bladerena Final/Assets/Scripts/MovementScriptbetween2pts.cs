@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class MovementScriptbetween2pts : Damage
 {
     [Range(0,5)]
@@ -21,9 +23,12 @@ public class MovementScriptbetween2pts : Damage
     int pointCount;
     int direction = 1;
 
+    private AudioSource audioSourc;
+
 
     private void Awake()
     {
+        
         wayPoints = new Transform[ways.transform.childCount];
         for (int i = 0; i < ways.gameObject.transform.childCount; i++)
         {
@@ -33,6 +38,7 @@ public class MovementScriptbetween2pts : Damage
 
     private void Start()
     {
+        audioSourc = GetComponent<AudioSource>();
         pointCount = wayPoints.Length;
         pointIndex = 1;
         targetPos = wayPoints[pointIndex].transform.position;
@@ -40,10 +46,12 @@ public class MovementScriptbetween2pts : Damage
 
     private void Update()
     {
+        
         var step = speedMultiplier*objSpeed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
         if (transform.position == targetPos)
         {
+            audioSourc.Play();
             NextPoint();
 
         }

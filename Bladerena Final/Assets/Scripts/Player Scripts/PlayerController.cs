@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private LayerMask dashLayerMask;
 
+    public GameObject gameOverObject; // Reference to the "Game Over" GameObject in the Inspector
+
     private new Rigidbody2D rigidbody2D;
     private Vector2 moveDir;
     private Vector2 lastMoveDir;
@@ -179,6 +181,9 @@ public class PlayerController : MonoBehaviour
 
         // Disable the BoxCollider component to prevent further collisions
         GetComponent<BoxCollider2D>().enabled = false;
+
+        // Show the "Game Over" GameObject when the player dies
+        gameOverObject.SetActive(true);
 
         // Destroy the enemy GameObject after some time (adjust the delay as needed)
         float deathAnimationDuration = 2f; // Replace with the actual duration of the death animation

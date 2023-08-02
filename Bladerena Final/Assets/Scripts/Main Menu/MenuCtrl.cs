@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuCtrl : MonoBehaviour
 {
-    // Declare game object
+    // Declare game object for showing-hiding buttons
     public GameObject objectToShow;
     public GameObject objectToHide;
+
+    // Declare variables for audio control
+    public Sound[] musicSounds, sfxsounds;
+    public AudioSource musicSource, sfxSource;
+
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -33,4 +38,6 @@ public class MenuCtrl : MonoBehaviour
             objectToHide.SetActive(false);
         }
     }
+
+
 }

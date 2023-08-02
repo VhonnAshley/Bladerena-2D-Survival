@@ -19,6 +19,9 @@ public class GoblinController : MonoBehaviour
     // New variable to track if the enemy is following the player
     private bool isFollowingPlayer = true;
 
+    // Declarations for scoreCount
+    public int value;
+
     GameObject target;
 
 
@@ -35,8 +38,6 @@ public class GoblinController : MonoBehaviour
     {
         // Health system
         health = maxHealth;
-
-       
 
         target = GameObject.FindGameObjectWithTag("Player");
         Vector2 moveDir = (target.transform.position - transform.position).normalized * speed;
@@ -116,5 +117,8 @@ public class GoblinController : MonoBehaviour
         // Destroy the enemy GameObject after some time (adjust the delay as needed)
         float deathAnimationDuration = 2f; // Replace with the actual duration of the death animation
         Destroy(gameObject, deathAnimationDuration);
+
+        // Trigger the scoreCount event when the goblin dies
+        ScoreCounter.Instance.IncreaseScore(value);
     }
 }

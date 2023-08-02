@@ -19,7 +19,7 @@ TagManager:
   - 
   - Walls
   - 
-  - 
+  - Front
   - 
   - 
   - 
@@ -57,4 +57,7 @@ TagManager:
     locked: 0
   - name: WallLayer
     uniqueID: 3898988555
+    locked: 0
+  - name: Front
+    uniqueID: 1076728159
     locked: 0

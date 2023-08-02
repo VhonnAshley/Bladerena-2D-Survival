@@ -9,6 +9,7 @@ public class FireballController : MonoBehaviour
 
     public GameObject player;
     public float speed;
+    public float distanceBetween;
 
     private float distance;
     private Animator animator;
@@ -35,14 +36,20 @@ public class FireballController : MonoBehaviour
             // Calculate the movement vector
             Vector2 moveDirection = direction * speed * Time.deltaTime;
 
-            // Move the Fireball towards the player
-            transform.Translate(moveDirection);
+            if (distance < distanceBetween)
+            {
+                // Move the goblin towards the player
+                transform.Translate(moveDirection);
+                animator.SetBool("isMoving", true);
+            }
+            else
+            {
+                animator.SetBool("isMoving", false);
+            }
 
-            // Set the isMoving parameter in the animator based on the magnitude of moveDirection
-            animator.SetBool("isMoving", moveDirection.magnitude > 0f);
-
-            // Update the blend tree parameter for horizontal movement
+            // Update the blend tree parameters
             animator.SetFloat("horizontalMovement", moveDirection.x);
+            animator.SetFloat("verticalMovement", moveDirection.y);
         }
     }
 

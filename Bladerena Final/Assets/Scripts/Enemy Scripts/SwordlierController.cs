@@ -33,21 +33,10 @@ public class SwordlierController : MonoBehaviour
     // Declarations for scoreCounter
     public int value;
 
-    private GameObject MeleeSFX;
-    private GameObject ProjectileSFX;
-
-    private AudioSource audSourceMelee;
-    private AudioSource audioSourceProjectile;
-
 
 
     private void Start()
     {
-        MeleeSFX = transform.GetChild(2).gameObject;
-        ProjectileSFX = transform.GetChild(3).gameObject;
-        audSourceMelee = MeleeSFX.GetComponent<AudioSource>();
-        audioSourceProjectile = ProjectileSFX.GetComponent<AudioSource>();
-
 
         // Health system
         health = maxHealth;
@@ -90,7 +79,8 @@ public class SwordlierController : MonoBehaviour
             {
                 if (Time.time >= nextFireTime)
                 {
-                    audioSourceProjectile.Play();
+                    // Play SFX
+                    AudioManager.Instance.PlaySFX("slash1");
                     animator.SetBool("isProjectile", true);
                     SpawnProjectile();
                     nextFireTime = Time.time + firerate;
@@ -121,7 +111,8 @@ public class SwordlierController : MonoBehaviour
                 // Check if the distance is close enough to attack
                 if (distance < attackRange)
                 {
-                    audSourceMelee.Play();
+                    // Play SFX
+                    AudioManager.Instance.PlaySFX("slash2");
                     animator.SetBool("isAttacking", true);
                 }
                 else

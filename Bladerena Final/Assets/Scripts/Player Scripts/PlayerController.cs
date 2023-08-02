@@ -25,27 +25,10 @@ public class PlayerController : MonoBehaviour
 
     public PlayerCombat pc; // for referencing Player Combat script
 
-    private GameObject DashSFX; // Reference the child game object
-    private AudioSource audSourceDash; // Getting the Audio source component within that child game object
-
-    private GameObject DeathSFX;
-    private AudioSource audSourceDeath;
-
-
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-    }
-
-    public void Start()
-    {
-        DashSFX = transform.GetChild(1).gameObject;
-        DeathSFX = transform.GetChild(3).gameObject;
-        audSourceDash = DashSFX.GetComponent<AudioSource>();
-        audSourceDeath = DeathSFX.GetComponent<AudioSource>();
-
-
     }
 
     private void Update()
@@ -142,7 +125,7 @@ public class PlayerController : MonoBehaviour
             rigidbody2D.collisionDetectionMode = CollisionDetectionMode2D.Discrete; // Set back to Discrete after dashing
 
             // Trigger the dash animation by setting the "isDashing" parameter to true
-            audSourceDash.Play();
+            AudioManager.Instance.PlaySFX("dash");
             animator.SetBool("isDashing", true);
 
             isDashButtonDown = false;
@@ -169,7 +152,10 @@ public class PlayerController : MonoBehaviour
     {
         // Debug
         Debug.Log("Player has died!");
-        audSourceDeath.Play();
+
+        // Play SFX
+        AudioManager.Instance.PlaySFX("roblox");
+
         // Play the death animation by setting the "isDead" parameter to true
         animator.SetBool("isDead", true);
 

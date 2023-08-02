@@ -49,7 +49,10 @@ public class FireballController : MonoBehaviour
             {
                 // Move the goblin towards the player
                 transform.Translate(moveDirection);
+                // Play SFX
+                AudioManager.Instance.PlaySFX("homing");
                 animator.SetBool("isMoving", true);
+
             }
             else
             {
@@ -76,6 +79,9 @@ public class FireballController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            // Play SFX
+            AudioManager.Instance.PlaySFX("explode");
+
             // Check if the collision is with the player
             // Call the Die() function of the player when hit by the fireball
             collision.gameObject.GetComponent<PlayerController>().Die();
@@ -92,6 +98,9 @@ public class FireballController : MonoBehaviour
 
         // Disable the BoxCollider component to prevent further collisions
         GetComponent<BoxCollider2D>().enabled = false;
+
+        // Play SFX
+        AudioManager.Instance.PlaySFX("burning");
 
         // Play the death animation by setting the "isDead" parameter to true
         animator.SetBool("isDead", true);

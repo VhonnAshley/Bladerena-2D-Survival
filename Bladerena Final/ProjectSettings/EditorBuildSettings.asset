@@ -5,22 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-<<<<<<< Updated upstream
-  - enabled: 0
-    path: Assets/_Scenes/_MainMenu.unity
-    guid: c3f22129bd38b5c42bf75429e2cdfac8
-=======
   - enabled: 1
     path: Assets/_Scenes/_Menu.unity
     guid: fc33fbe8603edab47bfc8cb6d08c2f29
->>>>>>> Stashed changes
   - enabled: 1
-    path: Assets/_Scenes/MainScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/_Scenes/_Ash(Station).unity
-    guid: 198f30aea355be84bb6094d43e97e1a5
-  - enabled: 1
-    path: Assets/_Scenes/_Menu.unity
-    guid: fc33fbe8603edab47bfc8cb6d08c2f29
+    path: Assets/_Scenes/_MainScene.unity
+    guid: e19035a36c54be049bcc6829991d6e62
   m_configObjects: {}
